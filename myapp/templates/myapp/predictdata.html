@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    {% load static %}
+    <style>
+        body {
+	background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
+	color: #000;
+	font: 14px Arial;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+  }
+ .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+    </style>
+</head>
+<body>
+
+
+<h1 style=" font-family:UnGungseo; color:black;">Glaumetric Precision Monitoring System</h1>
+<br/>
+<div class="w3-right w3-hide-small">
+      <a href="/homepage" class="w3-bar-item w3-button">Home</a>
+      <a href="/dataupload" class="w3-bar-item w3-button">Dataset Upload</a>
+      <a href="/createmodel" class="w3-bar-item w3-button">Model Training</a>
+        <a href="/predictdata" class="w3-bar-item w3-button">Data Prediction</a>
+        <a href="/viewgraph" class="w3-bar-item w3-button">Evaluation Matrix</a>
+    </div>
+<br>
+<br>
+<hr style="border: 1px solid red;">
+<div style=" font-family: Times New Roman; color:black;text-align:center;">
+ <form action="{% url 'predictdata' %}" method="POST">
+         {% csrf_token %}
+     <h3 style="text-align:center;color:black;;">PREDICT NEW DATA </h3><br>
+  <input type="file" id="myFile" name="myFile"><br/><br/><br/>
+  <input type="submit">
+     <br><br>
+     <table>
+         <tr>
+             <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+              <td> <div style="width: 1300px; height: 50px;color: black;">
+                  <p style="text-align: justify;line-height: 40px;   "><h3>{{data1}}</h3></p>
+                  <p style="text-align: justify;line-height: 40px;   "><h3>{{data2}}</h3></p>
+                  <p style="text-align: justify;line-height: 40px;   "><h3>{{data3}}</h3></p>
+                  <p style="text-align: justify;line-height: 40px;   "><h3>{{data4}}</h3></p>
+                  <p style="text-align: justify;line-height: 40px;   "><h3>{{data5}}</h3></p>
+                  <p style="text-align: justify;line-height: 40px;   "><h3>{{data6}}</h3></p>
+      </div></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+         </tr>
+     </table>
+
+
+
+</form>
+
+</div>
+</body>
+</html>
